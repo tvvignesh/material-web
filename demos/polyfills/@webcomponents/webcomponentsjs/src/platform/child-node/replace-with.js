@@ -12,7 +12,9 @@ const nativeInsertBefore = Node.prototype.insertBefore;
 const nativeRemoveChild = Node.prototype.removeChild;
 const nativeGetParentNode = (_b = (_a = Object.getOwnPropertyDescriptor(Node.prototype, 'parentNode')) === null || _a === void 0 ? void 0 : _a.get) !== null && _b !== void 0 ? _b : 
 // In Safari 9, the `parentNode` descriptor's `get` and `set` are undefined.
-function () { return this.parentNode; };
+function () {
+    return this.parentNode;
+};
 const installReplaceWith = (constructor) => {
     const prototype = constructor.prototype;
     if (prototype.hasOwnProperty('replaceWith')) {
@@ -31,9 +33,10 @@ const installReplaceWith = (constructor) => {
                 nativeInsertBefore.call(parentNode, typeof arg === 'string' ? document.createTextNode(arg) : arg, this);
             }
             nativeRemoveChild.call(parentNode, this);
-        }
+        },
     });
 };
 installReplaceWith(CharacterData);
 installReplaceWith(Element);
+export {};
 //# sourceMappingURL=replace-with.js.map

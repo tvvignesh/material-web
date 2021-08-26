@@ -21,10 +21,11 @@ const installAppend = (constructor) => {
             for (const arg of args) {
                 nativeAppendChild.call(this, typeof arg === 'string' ? document.createTextNode(arg) : arg);
             }
-        }
+        },
     });
 };
 installAppend(Document);
 installAppend(DocumentFragment);
 installAppend(Element);
+export {};
 //# sourceMappingURL=append.js.map

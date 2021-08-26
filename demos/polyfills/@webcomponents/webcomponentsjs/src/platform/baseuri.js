@@ -18,10 +18,11 @@ if (!native_baseURI) {
             // this.ownerDocument is `null` for documents
             const doc = this.ownerDocument || this;
             const base = doc.querySelector('base[href]');
-            return base && base.href || window.location.href;
+            return (base && base.href) || window.location.href;
         },
         configurable: true,
-        enumerable: true
+        enumerable: true,
     });
 }
+export {};
 //# sourceMappingURL=baseuri.js.map

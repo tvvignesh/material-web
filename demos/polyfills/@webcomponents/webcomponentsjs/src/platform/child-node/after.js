@@ -11,11 +11,15 @@ var _a, _b, _c, _d;
 const nativeInsertBefore = Node.prototype.insertBefore;
 const nativeGetParentNode = (_b = (_a = Object.getOwnPropertyDescriptor(Node.prototype, 'parentNode')) === null || _a === void 0 ? void 0 : _a.get) !== null && _b !== void 0 ? _b : 
 // In Safari 9, the `parentNode` descriptor's `get` and `set` are undefined.
-function () { return this.parentNode; };
+function () {
+    return this.parentNode;
+};
 const nativeGetNextSibling = (_d = (_c = Object.getOwnPropertyDescriptor(Node.prototype, 'nextSibling')) === null || _c === void 0 ? void 0 : _c.get) !== null && _d !== void 0 ? _d : 
 // In Safari 9, the `nextSibling` descriptor's `get` and `set` are
 // undefined.
-function () { return this.nextSibling; };
+function () {
+    return this.nextSibling;
+};
 const installAfter = (constructor) => {
     const prototype = constructor.prototype;
     if (prototype.hasOwnProperty('after')) {
@@ -34,9 +38,10 @@ const installAfter = (constructor) => {
             for (const arg of args) {
                 nativeInsertBefore.call(parentNode, typeof arg === 'string' ? document.createTextNode(arg) : arg, nextSibling);
             }
-        }
+        },
     });
 };
 installAfter(CharacterData);
 installAfter(Element);
+export {};
 //# sourceMappingURL=after.js.map

@@ -11,7 +11,9 @@ var _a, _b;
 const nativeRemoveChild = Node.prototype.removeChild;
 const nativeGetParentNode = (_b = (_a = Object.getOwnPropertyDescriptor(Node.prototype, 'parentNode')) === null || _a === void 0 ? void 0 : _a.get) !== null && _b !== void 0 ? _b : 
 // In Safari 9, the `parentNode` descriptor's `get` and `set` are undefined.
-function () { return this.parentNode; };
+function () {
+    return this.parentNode;
+};
 const installRemove = (constructor) => {
     const prototype = constructor.prototype;
     if (prototype.hasOwnProperty('remove')) {
@@ -26,9 +28,10 @@ const installRemove = (constructor) => {
             if (parentNode) {
                 nativeRemoveChild.call(parentNode, this);
             }
-        }
+        },
     });
 };
 installRemove(CharacterData);
 installRemove(Element);
+export {};
 //# sourceMappingURL=remove.js.map

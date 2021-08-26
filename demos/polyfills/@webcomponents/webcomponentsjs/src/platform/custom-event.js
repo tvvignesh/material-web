@@ -27,57 +27,53 @@ if (!workingDefaultPrevented) {
             get() {
                 return true;
             },
-            configurable: true
+            configurable: true,
         });
     };
 }
 const isIE = /Trident/.test(navigator.userAgent);
 // Event constructor shim
-if (!window.Event || isIE && (typeof window.Event !== 'function')) {
+if (!window.Event || (isIE && typeof window.Event !== 'function')) {
     const origEvent = window.Event;
-    window['Event'] =
-        ((inType, params) => {
-            params = params || {};
-            const e = document.createEvent('Event');
-            e.initEvent(inType, Boolean(params.bubbles), Boolean(params.cancelable));
-            return e;
-        });
+    window['Event'] = ((inType, params) => {
+        params = params || {};
+        const e = document.createEvent('Event');
+        e.initEvent(inType, Boolean(params.bubbles), Boolean(params.cancelable));
+        return e;
+    });
     if (origEvent) {
-        // tslint:disable-next-line:forin
         for (const i in origEvent) {
-            // tslint:disable-next-line:no-any
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             window['Event'][i] = origEvent[i];
         }
         window['Event'].prototype = origEvent.prototype;
     }
 }
 // CustomEvent constructor shim
-if (!window.CustomEvent || isIE && (typeof window.CustomEvent !== 'function')) {
-    window['CustomEvent'] =
-        ((inType, params) => {
-            params = params || {};
-            const e = document.createEvent('CustomEvent');
-            e.initCustomEvent(inType, Boolean(params.bubbles), Boolean(params.cancelable), params.detail);
-            return e;
-        });
+if (!window.CustomEvent || (isIE && typeof window.CustomEvent !== 'function')) {
+    window['CustomEvent'] = ((inType, params) => {
+        params = params || {};
+        const e = document.createEvent('CustomEvent');
+        e.initCustomEvent(inType, Boolean(params.bubbles), Boolean(params.cancelable), params.detail);
+        return e;
+    });
     window['CustomEvent'].prototype = window.Event.prototype;
 }
-if (!window.MouseEvent || isIE && (typeof window.MouseEvent !== 'function')) {
+if (!window.MouseEvent || (isIE && typeof window.MouseEvent !== 'function')) {
     const origMouseEvent = window.MouseEvent;
-    window['MouseEvent'] =
-        ((inType, params) => {
-            params = params || {};
-            const e = document.createEvent('MouseEvent');
-            e.initMouseEvent(inType, Boolean(params.bubbles), Boolean(params.cancelable), params.view || window, params.detail, params.screenX, params.screenY, params.clientX, params.clientY, params.ctrlKey, params.altKey, params.shiftKey, params.metaKey, params.button, params.relatedTarget);
-            return e;
-        });
+    window['MouseEvent'] = ((inType, params) => {
+        params = params || {};
+        const e = document.createEvent('MouseEvent');
+        e.initMouseEvent(inType, Boolean(params.bubbles), Boolean(params.cancelable), params.view || window, params.detail, params.screenX, params.screenY, params.clientX, params.clientY, params.ctrlKey, params.altKey, params.shiftKey, params.metaKey, params.button, params.relatedTarget);
+        return e;
+    });
     if (origMouseEvent) {
-        // tslint:disable-next-line:forin
         for (const j in origMouseEvent) {
-            // tslint:disable-next-line:no-any
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             window.MouseEvent[j] = origMouseEvent[j];
         }
     }
     window['MouseEvent'].prototype = origMouseEvent.prototype;
 }
+export {};
 //# sourceMappingURL=custom-event.js.map

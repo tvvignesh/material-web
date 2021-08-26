@@ -14,11 +14,14 @@ const Element_prototype = Element.prototype;
 const attributesDescriptor = (_a = Object.getOwnPropertyDescriptor(Element_prototype, 'attributes')) !== null && _a !== void 0 ? _a : Object.getOwnPropertyDescriptor(Node.prototype, 'attributes');
 // In Safari 9, the `attributes` descriptor's getter is undefined. In Chrome 41,
 // the `attributes` descriptor is a data descriptor on each Element instance.
-const getAttributes = (_b = attributesDescriptor === null || attributesDescriptor === void 0 ? void 0 : attributesDescriptor.get) !== null && _b !== void 0 ? _b : function () { return this.attributes; };
+const getAttributes = (_b = attributesDescriptor === null || attributesDescriptor === void 0 ? void 0 : attributesDescriptor.get) !== null && _b !== void 0 ? _b : function () {
+    return this.attributes;
+};
 const map = Array.prototype.map;
 if (!Element_prototype.hasOwnProperty('getAttributeNames')) {
     Element_prototype.getAttributeNames = function getAttributeNames() {
-        return map.call(getAttributes.call(this), attr => attr.name);
+        return map.call(getAttributes.call(this), (attr) => attr.name);
     };
 }
+export {};
 //# sourceMappingURL=get-attribute-names.js.map

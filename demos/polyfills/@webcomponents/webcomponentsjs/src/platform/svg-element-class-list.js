@@ -24,4 +24,5 @@ if (HTMLElement_prototype.hasOwnProperty('classList') &&
     !SVGElement_prototype.hasOwnProperty('classList')) {
     Object.defineProperty(Element_prototype, 'classList', Object.getOwnPropertyDescriptor(HTMLElement_prototype, 'classList'));
 }
+export {};
 //# sourceMappingURL=svg-element-class-list.js.map

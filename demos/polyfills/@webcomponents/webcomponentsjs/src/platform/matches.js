@@ -11,6 +11,11 @@ found at http://polymer.github.io/PATENTS.txt
 var _a;
 const Element_prototype = Element.prototype;
 if (!Element_prototype.hasOwnProperty('matches')) {
-    Element_prototype.matches = (_a = Element_prototype.webkitMatchesSelector) !== null && _a !== void 0 ? _a : Element_prototype.msMatchesSelector;
+    Element_prototype.matches =
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (_a = Element_prototype.webkitMatchesSelector) !== null && _a !== void 0 ? _a : 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        Element_prototype.msMatchesSelector;
 }
+export {};
 //# sourceMappingURL=matches.js.map

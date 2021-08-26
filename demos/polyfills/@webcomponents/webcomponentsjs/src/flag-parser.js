@@ -10,8 +10,9 @@
  */
 // Establish scope.
 const extendedWindow = window;
-extendedWindow['WebComponents'] =
-    extendedWindow['WebComponents'] || { 'flags': {} };
+extendedWindow['WebComponents'] = extendedWindow['WebComponents'] || {
+    'flags': {},
+};
 // loading script
 const file = 'webcomponents-bundle';
 const script = document.querySelector('script[src*="' + file + '"]');
@@ -20,11 +21,14 @@ const flagMatcher = /wc-(.+)/;
 //     the flags local variable off of window.WebComponents.flags? If not
 //     then why check for noOpts, which can't possibly have been set?
 // Flags. Convert url arguments to flags
-let flags = {};
+const flags = {};
 if (!flags['noOpts']) {
     // from url
-    location.search.slice(1).split('&').forEach(function (option) {
-        let parts = option.split('=');
+    location.search
+        .slice(1)
+        .split('&')
+        .forEach(function (option) {
+        const parts = option.split('=');
         let match;
         if (parts[0] && (match = parts[0].match(flagMatcher))) {
             flags[match[1]] = parts[1] || true;
@@ -41,7 +45,7 @@ if (!flags['noOpts']) {
     // log flags
     const log = {};
     if (flags['log'] && flags['log']['split']) {
-        let parts = flags['log'].split(',');
+        const parts = flags['log'].split(',');
         parts.forEach(function (f) {
             log[f] = true;
         });
@@ -50,15 +54,16 @@ if (!flags['noOpts']) {
 }
 // exports
 extendedWindow['WebComponents']['flags'] = flags;
-let forceShady = flags['shadydom'];
+const forceShady = flags['shadydom'];
 if (forceShady) {
     extendedWindow['ShadyDOM'] = extendedWindow['ShadyDOM'] || {};
     extendedWindow['ShadyDOM']['force'] = forceShady;
     const noPatch = flags['noPatch'];
     extendedWindow['ShadyDOM']['noPatch'] = noPatch === 'true' ? true : noPatch;
 }
-let forceCE = (flags['register'] || flags['ce']);
+const forceCE = (flags['register'] || flags['ce']);
 if (forceCE && window['customElements']) {
     extendedWindow['customElements']['forcePolyfill'] = forceCE;
 }
+export {};
 //# sourceMappingURL=flag-parser.js.map
