@@ -623,7 +623,7 @@ var li=function(e){function o(t){var n=e.call(this,i(i({},o.defaultAdapter),t))|
  * Copyright 2021 Google LLC
  * SPDX-LIcense-Identifier: Apache-2.0
  */
-const mi=ue`mwc-list ::slotted([mwc-list-item]:not([twoline])){height:var(--mdc-menu-item-height, 48px)}`
+const mi=ue`mwc-list ::slotted([mwc-list-item]:not([twoline])),mwc-list ::slotted([noninteractive]:not([twoline])){height:var(--mdc-menu-item-height, 48px)}`
 /**
  * @license
  * Copyright 2020 Google LLC
