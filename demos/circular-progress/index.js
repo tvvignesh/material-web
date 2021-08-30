@@ -316,7 +316,7 @@ const Re=le`:host{font-family:var(--mdc-icon-font, "Material Icons");font-weight
  * @license
  * Copyright 2018 Google LLC
  * SPDX-License-Identifier: Apache-2.0
- */;let Ee=class extends me{render(){return M`<slot></slot>`}};Ee.styles=[Re],Ee=i([Q("mwc-icon")],Ee);let Pe=!1;const ze=()=>{},Ie={get passive(){return Pe=!0,!1}};document.addEventListener("x",ze,Ie),document.removeEventListener("x",ze);const Oe=Pe;
+ */;let Ee=class extends me{render(){return M`<span><slot></slot></span>`}};Ee.styles=[Re],Ee=i([Q("mwc-icon")],Ee);let Pe=!1;const ze=()=>{},Ie={get passive(){return Pe=!0,!1}};document.addEventListener("x",ze,Ie),document.removeEventListener("x",ze);const Oe=Pe;
 /**
  * @license
  * Copyright 2018 Google LLC

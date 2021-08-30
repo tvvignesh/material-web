@@ -194,7 +194,7 @@ const ht=lt`:host{font-family:var(--mdc-icon-font, "Material Icons");font-weight
  * @license
  * Copyright 2018 Google LLC
  * SPDX-License-Identifier: Apache-2.0
- */;let ft=class extends mt{render(){return U`<slot></slot>`}};ft.styles=[ht],ft=r([Q("mwc-icon")],ft);let bt=!1;const gt=()=>{},vt={get passive(){return bt=!0,!1}};document.addEventListener("x",gt,vt),document.removeEventListener("x",gt);const yt=bt;
+ */;let ft=class extends mt{render(){return U`<span><slot></slot></span>`}};ft.styles=[ht],ft=r([Q("mwc-icon")],ft);let bt=!1;const gt=()=>{},vt={get passive(){return bt=!0,!1}};document.addEventListener("x",gt,vt),document.removeEventListener("x",gt);const yt=bt;
 /**
  * @license
  * Copyright 2018 Google LLC

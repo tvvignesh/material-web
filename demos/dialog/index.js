@@ -343,7 +343,7 @@ const Vt=pt`:host{font-family:var(--mdc-icon-font, "Material Icons");font-weight
  * @license
  * Copyright 2018 Google LLC
  * SPDX-License-Identifier: Apache-2.0
- */;let Mt=class extends ut{render(){return U`<slot></slot>`}};Mt.styles=[Vt],Mt=o([Q("mwc-icon")],Mt);
+ */;let Mt=class extends ut{render(){return U`<span><slot></slot></span>`}};Mt.styles=[Vt],Mt=o([Q("mwc-icon")],Mt);
 /**
  * @license
  * Copyright 2016 Google Inc.

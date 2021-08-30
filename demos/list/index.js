@@ -800,7 +800,7 @@ const Fi=ue`:host{font-family:var(--mdc-icon-font, "Material Icons");font-weight
  * @license
  * Copyright 2018 Google LLC
  * SPDX-License-Identifier: Apache-2.0
- */;let zi=class extends ge{render(){return U`<slot></slot>`}};zi.styles=[Fi],zi=r([Q("mwc-icon")],zi);
+ */;let zi=class extends ge{render(){return U`<span><slot></slot></span>`}};zi.styles=[Fi],zi=r([Q("mwc-icon")],zi);
 /**
  * @license
  * Copyright 2019 Google LLC
