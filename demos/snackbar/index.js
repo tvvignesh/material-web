@@ -307,10 +307,10 @@ return function(t,e,i){const r=t.constructor;if(!i){const t="__"+e;if(!(i=r.getP
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: Apache-2.0
- */;class he extends tt{constructor(){super(...arguments),this.raised=!1,this.unelevated=!1,this.outlined=!1,this.dense=!1,this.disabled=!1,this.trailingIcon=!1,this.fullwidth=!1,this.icon="",this.label="",this.expandContent=!1,this.shouldRenderRipple=!1,this.rippleHandlers=new pe(()=>(this.shouldRenderRipple=!0,this.ripple))}renderOverlay(){return N``}renderRipple(){const t=this.raised||this.unelevated;return this.shouldRenderRipple?N`<mwc-ripple class="ripple" .primary="${!t}" .disabled="${this.disabled}"></mwc-ripple>`:""}focus(){const t=this.buttonElement;t&&(this.rippleHandlers.startFocus(),t.focus())}blur(){const t=this.buttonElement;t&&(this.rippleHandlers.endFocus(),t.blur())}getRenderClasses(){return Rt({"mdc-button--raised":this.raised,"mdc-button--unelevated":this.unelevated,"mdc-button--outlined":this.outlined,"mdc-button--dense":this.dense})}render(){return N`
+ */;class he extends tt{constructor(){super(...arguments),this.raised=!1,this.unelevated=!1,this.outlined=!1,this.dense=!1,this.disabled=!1,this.trailingIcon=!1,this.fullwidth=!1,this.icon="",this.label="",this.expandContent=!1,this.shouldRenderRipple=!1,this.rippleHandlers=new pe(()=>(this.shouldRenderRipple=!0,this.ripple))}renderOverlay(){return N``}renderRipple(){const t=this.raised||this.unelevated;return this.shouldRenderRipple?N`<mwc-ripple class="ripple" .primary="${!t}" .disabled="${this.disabled}"></mwc-ripple>`:""}focus(){const t=this.buttonElement;t&&(this.rippleHandlers.startFocus(),t.focus())}blur(){const t=this.buttonElement;t&&(this.rippleHandlers.endFocus(),t.blur())}getRenderClasses(){return{"mdc-button--raised":this.raised,"mdc-button--unelevated":this.unelevated,"mdc-button--outlined":this.outlined,"mdc-button--dense":this.dense}}render(){return N`
       <button
           id="button"
-          class="mdc-button ${this.getRenderClasses()}"
+          class="mdc-button ${Rt(this.getRenderClasses())}"
           ?disabled="${this.disabled}"
           aria-label="${this.label||this.icon}"
           aria-haspopup="${me(this.ariaHasPopup)}"

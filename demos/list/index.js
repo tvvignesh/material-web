@@ -696,10 +696,10 @@ const ki=s`:host{font-family:var(--mdc-icon-font, "Material Icons");font-weight:
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-class Ai extends Q{constructor(){super(...arguments),this.raised=!1,this.unelevated=!1,this.outlined=!1,this.dense=!1,this.disabled=!1,this.trailingIcon=!1,this.fullwidth=!1,this.icon="",this.label="",this.expandContent=!1,this.shouldRenderRipple=!1,this.rippleHandlers=new ze(()=>(this.shouldRenderRipple=!0,this.ripple))}renderOverlay(){return O``}renderRipple(){const e=this.raised||this.unelevated;return this.shouldRenderRipple?O`<mwc-ripple class="ripple" .primary="${!e}" .disabled="${this.disabled}"></mwc-ripple>`:""}focus(){const e=this.buttonElement;e&&(this.rippleHandlers.startFocus(),e.focus())}blur(){const e=this.buttonElement;e&&(this.rippleHandlers.endFocus(),e.blur())}getRenderClasses(){return Re({"mdc-button--raised":this.raised,"mdc-button--unelevated":this.unelevated,"mdc-button--outlined":this.outlined,"mdc-button--dense":this.dense})}render(){return O`
+class Ai extends Q{constructor(){super(...arguments),this.raised=!1,this.unelevated=!1,this.outlined=!1,this.dense=!1,this.disabled=!1,this.trailingIcon=!1,this.fullwidth=!1,this.icon="",this.label="",this.expandContent=!1,this.shouldRenderRipple=!1,this.rippleHandlers=new ze(()=>(this.shouldRenderRipple=!0,this.ripple))}renderOverlay(){return O``}renderRipple(){const e=this.raised||this.unelevated;return this.shouldRenderRipple?O`<mwc-ripple class="ripple" .primary="${!e}" .disabled="${this.disabled}"></mwc-ripple>`:""}focus(){const e=this.buttonElement;e&&(this.rippleHandlers.startFocus(),e.focus())}blur(){const e=this.buttonElement;e&&(this.rippleHandlers.endFocus(),e.blur())}getRenderClasses(){return{"mdc-button--raised":this.raised,"mdc-button--unelevated":this.unelevated,"mdc-button--outlined":this.outlined,"mdc-button--dense":this.dense}}render(){return O`
       <button
           id="button"
-          class="mdc-button ${this.getRenderClasses()}"
+          class="mdc-button ${Re(this.getRenderClasses())}"
           ?disabled="${this.disabled}"
           aria-label="${this.label||this.icon}"
           aria-haspopup="${He(this.ariaHasPopup)}"
