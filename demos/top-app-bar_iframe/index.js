@@ -152,13 +152,7 @@ var t}registerListeners(){this.registerScrollListener()}unregisterListeners(){th
  * Copyright 2018 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-class Ut extends It{constructor(){super(...arguments),this.mdcFoundationClass=v,this.prominent=!1,this.dense=!1,this.handleResize=()=>{this.mdcFoundation.handleWindowResize()}}barClasses(){return{"mdc-top-app-bar--dense":this.dense,"mdc-top-app-bar--prominent":this.prominent,"center-title":this.centerTitle}}contentClasses(){return{"mdc-top-app-bar--fixed-adjust":!this.dense&&!this.prominent,"mdc-top-app-bar--dense-fixed-adjust":this.dense&&!this.prominent,"mdc-top-app-bar--prominent-fixed-adjust":!this.dense&&this.prominent,"mdc-top-app-bar--dense-prominent-fixed-adjust":this.dense&&this.prominent}}registerListeners(){super.registerListeners(),window.addEventListener("resize",this.handleResize,zt)}unregisterListeners(){super.unregisterListeners(),window.removeEventListener("resize",this.handleResize)}}r([s({type:Boolean,reflect:!0})],Ut.prototype,"prominent",void 0),r([s({type:Boolean,reflect:!0})],Ut.prototype,"dense",void 0),
-/**
- * @license
- * Copyright 2017 Google LLC
- * SPDX-License-Identifier: BSD-3-Clause
- */
-console.warn("The main 'lit-element' module entrypoint is deprecated. Please update your imports to use the 'lit' package: 'lit' and 'lit/decorators.ts' or import from 'lit-element/lit-element.ts'. See https://lit.dev/msg/deprecated-import-path for more information.");
+class Ut extends It{constructor(){super(...arguments),this.mdcFoundationClass=v,this.prominent=!1,this.dense=!1,this.handleResize=()=>{this.mdcFoundation.handleWindowResize()}}barClasses(){return{"mdc-top-app-bar--dense":this.dense,"mdc-top-app-bar--prominent":this.prominent,"center-title":this.centerTitle}}contentClasses(){return{"mdc-top-app-bar--fixed-adjust":!this.dense&&!this.prominent,"mdc-top-app-bar--dense-fixed-adjust":this.dense&&!this.prominent,"mdc-top-app-bar--prominent-fixed-adjust":!this.dense&&this.prominent,"mdc-top-app-bar--dense-prominent-fixed-adjust":this.dense&&this.prominent}}registerListeners(){super.registerListeners(),window.addEventListener("resize",this.handleResize,zt)}unregisterListeners(){super.unregisterListeners(),window.removeEventListener("resize",this.handleResize)}}r([s({type:Boolean,reflect:!0})],Ut.prototype,"prominent",void 0),r([s({type:Boolean,reflect:!0})],Ut.prototype,"dense",void 0);
 /**
  * @license
  * Copyright 2021 Google LLC

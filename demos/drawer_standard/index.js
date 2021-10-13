@@ -167,13 +167,7 @@ function $t(t){return{addClass:e=>{t.classList.add(e)},removeClass:e=>{t.classLi
       <div class="mdc-drawer-app-content">
         <slot name="appContent"></slot>
       </div>
-      `}firstUpdated(){this.mdcRoot.addEventListener("keydown",t=>this.mdcFoundation.handleKeydown(t)),this.mdcRoot.addEventListener("transitionend",t=>this.mdcFoundation.handleTransitionEnd(t))}updated(t){t.has("type")&&this.createFoundation()}}r([l(".mdc-drawer")],Dt.prototype,"mdcRoot",void 0),r([l(".mdc-drawer-app-content")],Dt.prototype,"appContent",void 0),r([(t=>(e,i)=>{if(e.constructor._observers){if(!e.constructor.hasOwnProperty("_observers")){const t=e.constructor._observers;e.constructor._observers=new Map,t.forEach((t,i)=>e.constructor._observers.set(i,t))}}else{e.constructor._observers=new Map;const t=e.updated;e.updated=function(e){t.call(this,e),e.forEach((t,e)=>{const i=this.constructor._observers.get(e);void 0!==i&&i.call(this,this[e],t)})}}e.constructor._observers.set(i,t)})((function(t){""!==this.type&&(t?this.mdcFoundation.open():this.mdcFoundation.close())})),s({type:Boolean,reflect:!0})],Dt.prototype,"open",void 0),r([s({type:Boolean})],Dt.prototype,"hasHeader",void 0),r([s({reflect:!0})],Dt.prototype,"type",void 0),
-/**
- * @license
- * Copyright 2017 Google LLC
- * SPDX-License-Identifier: BSD-3-Clause
- */
-console.warn("The main 'lit-element' module entrypoint is deprecated. Please update your imports to use the 'lit' package: 'lit' and 'lit/decorators.ts' or import from 'lit-element/lit-element.ts'. See https://lit.dev/msg/deprecated-import-path for more information.");
+      `}firstUpdated(){this.mdcRoot.addEventListener("keydown",t=>this.mdcFoundation.handleKeydown(t)),this.mdcRoot.addEventListener("transitionend",t=>this.mdcFoundation.handleTransitionEnd(t))}updated(t){t.has("type")&&this.createFoundation()}}r([l(".mdc-drawer")],Dt.prototype,"mdcRoot",void 0),r([l(".mdc-drawer-app-content")],Dt.prototype,"appContent",void 0),r([(t=>(e,i)=>{if(e.constructor._observers){if(!e.constructor.hasOwnProperty("_observers")){const t=e.constructor._observers;e.constructor._observers=new Map,t.forEach((t,i)=>e.constructor._observers.set(i,t))}}else{e.constructor._observers=new Map;const t=e.updated;e.updated=function(e){t.call(this,e),e.forEach((t,e)=>{const i=this.constructor._observers.get(e);void 0!==i&&i.call(this,this[e],t)})}}e.constructor._observers.set(i,t)})((function(t){""!==this.type&&(t?this.mdcFoundation.open():this.mdcFoundation.close())})),s({type:Boolean,reflect:!0})],Dt.prototype,"open",void 0),r([s({type:Boolean})],Dt.prototype,"hasHeader",void 0),r([s({reflect:!0})],Dt.prototype,"type",void 0);
 /**
  * @license
  * Copyright 2021 Google LLC

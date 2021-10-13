@@ -156,13 +156,7 @@ const Ot=1,Lt=t=>(...e)=>({_$litDirective$:t,values:e});class Pt{constructor(t){
       <span class="mdc-tab-indicator ${kt({"mdc-tab-indicator--fade":this.fade})}">
         <span class="mdc-tab-indicator__content ${kt(t)}">${this.icon}</span>
       </span>
-      `}updated(t){t.has("fade")&&this.createFoundation()}createAdapter(){return Object.assign(Object.assign({},yt(this.mdcRoot)),{computeContentClientRect:()=>this.contentElement.getBoundingClientRect(),setContentStyleProperty:(t,e)=>this.contentElement.style.setProperty(t,e)})}computeContentClientRect(){return this.mdcFoundation.computeContentClientRect()}activate(t){this.mdcFoundation.activate(t)}deactivate(){this.mdcFoundation.deactivate()}}r([p(".mdc-tab-indicator")],zt.prototype,"mdcRoot",void 0),r([p(".mdc-tab-indicator__content")],zt.prototype,"contentElement",void 0),r([s()],zt.prototype,"icon",void 0),r([s({type:Boolean})],zt.prototype,"fade",void 0),
-/**
- * @license
- * Copyright 2017 Google LLC
- * SPDX-License-Identifier: BSD-3-Clause
- */
-console.warn("The main 'lit-element' module entrypoint is deprecated. Please update your imports to use the 'lit' package: 'lit' and 'lit/decorators.ts' or import from 'lit-element/lit-element.ts'. See https://lit.dev/msg/deprecated-import-path for more information.");
+      `}updated(t){t.has("fade")&&this.createFoundation()}createAdapter(){return Object.assign(Object.assign({},yt(this.mdcRoot)),{computeContentClientRect:()=>this.contentElement.getBoundingClientRect(),setContentStyleProperty:(t,e)=>this.contentElement.style.setProperty(t,e)})}computeContentClientRect(){return this.mdcFoundation.computeContentClientRect()}activate(t){this.mdcFoundation.activate(t)}deactivate(){this.mdcFoundation.deactivate()}}r([p(".mdc-tab-indicator")],zt.prototype,"mdcRoot",void 0),r([p(".mdc-tab-indicator__content")],zt.prototype,"contentElement",void 0),r([s()],zt.prototype,"icon",void 0),r([s({type:Boolean})],zt.prototype,"fade",void 0);
 /**
  * @license
  * Copyright 2021 Google LLC

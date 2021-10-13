@@ -164,13 +164,7 @@ const $e=1,De=3,Me=e=>(...t)=>({_$litDirective$:e,values:t});class Ne{constructo
           <slot></slot>
         </span>
         <span class="mdc-notched-outline__trailing"></span>
-      </span>`}}o([p(".mdc-notched-outline")],Be.prototype,"mdcRoot",void 0),o([a({type:Number})],Be.prototype,"width",void 0),o([a({type:Boolean,reflect:!0})],Be.prototype,"open",void 0),o([p(".mdc-notched-outline__notch")],Be.prototype,"notchElement",void 0),
-/**
- * @license
- * Copyright 2017 Google LLC
- * SPDX-License-Identifier: BSD-3-Clause
- */
-console.warn("The main 'lit-element' module entrypoint is deprecated. Please update your imports to use the 'lit' package: 'lit' and 'lit/decorators.ts' or import from 'lit-element/lit-element.ts'. See https://lit.dev/msg/deprecated-import-path for more information.");
+      </span>`}}o([p(".mdc-notched-outline")],Be.prototype,"mdcRoot",void 0),o([a({type:Number})],Be.prototype,"width",void 0),o([a({type:Boolean,reflect:!0})],Be.prototype,"open",void 0),o([p(".mdc-notched-outline__notch")],Be.prototype,"notchElement",void 0);
 /**
  * @license
  * Copyright 2021 Google LLC

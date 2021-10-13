@@ -158,13 +158,7 @@ const Rt=1,Lt=3,Ot=4,kt=t=>(...e)=>({_$litDirective$:t,values:e});class zt{const
           <slot></slot>
         </span>
         <span class="mdc-notched-outline__trailing"></span>
-      </span>`}}r([p(".mdc-notched-outline")],Ht.prototype,"mdcRoot",void 0),r([d({type:Number})],Ht.prototype,"width",void 0),r([d({type:Boolean,reflect:!0})],Ht.prototype,"open",void 0),r([p(".mdc-notched-outline__notch")],Ht.prototype,"notchElement",void 0),
-/**
- * @license
- * Copyright 2017 Google LLC
- * SPDX-License-Identifier: BSD-3-Clause
- */
-console.warn("The main 'lit-element' module entrypoint is deprecated. Please update your imports to use the 'lit' package: 'lit' and 'lit/decorators.ts' or import from 'lit-element/lit-element.ts'. See https://lit.dev/msg/deprecated-import-path for more information.");
+      </span>`}}r([p(".mdc-notched-outline")],Ht.prototype,"mdcRoot",void 0),r([d({type:Number})],Ht.prototype,"width",void 0),r([d({type:Boolean,reflect:!0})],Ht.prototype,"open",void 0),r([p(".mdc-notched-outline__notch")],Ht.prototype,"notchElement",void 0);
 /**
  * @license
  * Copyright 2021 Google LLC
