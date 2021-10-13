@@ -918,7 +918,7 @@ var no=function(e){function i(){var t=null!==e&&e.apply(this,arguments)||this;re
  * Copyright 2021 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-return function(e,t,i){const o=e.constructor;if(!i){const e="__"+t;if(!(i=o.getPropertyDescriptor(t,e)))throw new Error("@ariaProperty must be used after a @property decorator")}const n=i;let r="";if(!n.set)throw new Error("@ariaProperty requires a setter for "+t);const s={configurable:!0,enumerable:!0,set(e){if(""===r){const e=o.getPropertyOptions(t);r=e.attribute}this.hasAttribute(r)&&this.removeAttribute(r),n.set.call(this,e)}};return n.get&&(s.get=function(){return n.get.call(this)}),s}(e,t,i);throw new Error("@ariaProperty only supports TypeScript Decorators")}
+return function(e,t,i){const o=e.constructor;if(!i){const e="__"+t;if(!(i=o.getPropertyDescriptor(t,e)))throw new Error("@ariaProperty must be used after a @property decorator")}const n=i;let r="";if(!n.set)throw new Error("@ariaProperty requires a setter for "+t);if(e.dispatchWizEvent)return i;const s={configurable:!0,enumerable:!0,set(e){if(""===r){const e=o.getPropertyOptions(t);r="string"==typeof e.attribute?e.attribute:t}this.hasAttribute(r)&&this.removeAttribute(r),n.set.call(this,e)}};return n.get&&(s.get=function(){return n.get.call(this)}),s}(e,t,i);throw new Error("@ariaProperty only supports TypeScript Decorators")}
 /**
  * @license
  * Copyright 2018 Google LLC
