@@ -310,7 +310,7 @@ return function(t,e,i){const r=t.constructor;if(!i){const t="__"+e;if(!(i=r.getP
         @touchend="${this.handleRippleDeactivate}"
         @touchcancel="${this.handleRippleDeactivate}"
     >${this.renderRipple()}
-    <i class="material-icons">${this.icon}</i>
+    ${this.icon?W`<i class="material-icons">${this.icon}</i>`:""}
     <span
       ><slot></slot
     ></span>

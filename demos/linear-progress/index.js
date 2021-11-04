@@ -449,7 +449,7 @@ class de extends vt{constructor(){super(...arguments),this.disabled=!1,this.icon
         @touchend="${this.handleRippleDeactivate}"
         @touchcancel="${this.handleRippleDeactivate}"
     >${this.renderRipple()}
-    <i class="material-icons">${this.icon}</i>
+    ${this.icon?N`<i class="material-icons">${this.icon}</i>`:""}
     <span
       ><slot></slot
     ></span>
