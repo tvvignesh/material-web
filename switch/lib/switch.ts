@@ -70,8 +70,9 @@ export class Switch extends LitElement {
         class="md3-switch ${classMap(this.getRenderClasses())}"
         role="switch"
         aria-checked="${this.selected}"
-        aria-label="${ifDefined(this.ariaLabel)}"
-        aria-labelledby="${ifDefined(this.ariaLabelledBy || undefined)}"
+        aria-label="${ifDefined(this.ariaLabel ? this.ariaLabel : undefined)}"
+        aria-labelledby="${
+        ifDefined(this.ariaLabelledBy ? this.ariaLabelledBy : undefined)}"
         .disabled=${this.disabled}
         @click=${this.handleClick}
         @focus="${this.handleFocus}"
